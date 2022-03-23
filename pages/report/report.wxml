@@ -4,7 +4,7 @@
 <view class="report" wx:if="{{!alter}}">
   <view class="report-list pad24">
     <view class="report-top">
-      <text>防控疫情，人人有责，请认真登记您的到访信息</text>
+      <text>防控疫情，人人有责，请认真登记您的健康信息信息</text>
     </view>
     
     <view class="name">

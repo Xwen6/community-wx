@@ -63,13 +63,13 @@ Page({
     });
     
   },
-  //分享
-  onShareAppMessage: function(res) {
-    return {
-      title: Config.applet,
-      path: 'pages/start/start'
-    };
-  },
+  // //分享
+  // onShareAppMessage: function(res) {
+  //   return {
+  //     title: Config.applet,
+  //     path: 'pages/start/start'
+  //   };
+  // },
   onShow() {
     this.setData({
       address: '',
@@ -168,13 +168,15 @@ Page({
         icon: 'none',
         duration: 1500
       })
-    } else if (!this.data.address) {
-      wx.showToast({
-        title: '请选择报修地址',
-        icon: 'none',
-        duration: 1500
-      })
-    } else {
+    } 
+    // else if (!this.data.address) {
+    //   wx.showToast({
+    //     title: '请选择报修地址',
+    //     icon: 'none',
+    //     duration: 1500
+    //   })
+    // } 
+    else {
       var temp = this.data.temp;
       var len = temp.length;
       if (len == 0) {

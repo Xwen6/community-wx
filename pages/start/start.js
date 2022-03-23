@@ -19,12 +19,12 @@ Page({
   onLoad: function(options) {
     //获取userId和userInfo
     var token = wx.getStorageSync(Config.tokenName);
-    //console.log(token);
+    console.log(token);
     //判断是否授权 授权后直接跳转到index
     if ( token ) {
-      wx.switchTab({
-        url: '../index/index'
-      });
+     // wx.switchTab({
+        //url: '../index/index'
+      //});
     }
 
     //清空缓存时没有token
@@ -50,7 +50,7 @@ Page({
   /*绑定系统信息*/
   _bindAddressInfo:function(systemInfo){
     this.setData({
-        datas: systemInfo.data,
+        datas: systemInfo.data.data,
         showLoading: false, //加载中动画
     });
   },
@@ -73,6 +73,8 @@ Page({
 
   //按钮的点击事件
   bindGetUserInfo(e) {
+
+  
     var that=this;
     start.getUserInfo(e,(flag)=> {
       if (!flag) {

@@ -50,6 +50,7 @@ class Token {
                     method:'POST',
                     data:{
                         code:res.code
+                        
                     },
                     success:function(res){
                         if(res.data.code == 10000){

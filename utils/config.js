@@ -10,17 +10,20 @@ class Config{
 
 Config.debug = false;
 Config.applet = '业主事';
-Config.bannerName = '安泰物业';
+Config.bannerName = '物业';
 Config.bannerDescription = '贴心改变生活，用心创造价值。';
 Config.api = Config.debug ? 'http://yezhushi-api.me/api/v1/' : 'https://www.yezhushi.com/api/v1/'; //接口地址
+Config.gateway = "http://localhost:10010/";
 Config.baseUrl = Config.debug ? 'http://yezhushi-api.me' : 'https://www.yezhushi.com'; //图片地址 
 Config.tokenName = 'token';
 Config.onPay=true;  //是否启用支付
 
 //统一管理接口定义
-Config.systemInfo = Config.api + 'system/load_config'; //系统配置接口
+//Config.systemInfo = Config.api + 'system/load_config'; //系统配置接口
+Config.systemInfo = Config.gateway + 'wechatApiService/Config/getSystemConfig'; //系统配置接口
 Config.tokenVerify = Config.api + 'token/verify'; //验证TOKEN接口
-Config.tokenUser = Config.api + 'token/user'; //获取用户TOKEN接口
+//Config.tokenUser = Config.api + 'token/user'; //获取用户TOKEN接口
+Config.tokenUser = Config.gateway + 'wechatApiService/users/getToken'; //获取用户TOKEN接口
 Config.modifyUser = Config.api + 'token/modify'; //更新用户信息
 Config.indexArticle = Config.api + 'index/get_article_list'; //公告快讯
 Config.indexActivity = Config.api + 'index/get_activity_list'; //社区活动
@@ -34,8 +37,8 @@ Config.defaultAddress = Config.api + 'address/set_default'; //设置用户默认
 Config.deleteAddress = Config.api + 'address/delete_address'; //删除用户地址
 Config.saveAddress = Config.api + 'address/save_address'; //删除用户地址
 Config.getEstates = Config.api + 'repair/get_estate_list'; //获取所有小区地址
-Config.uploadFile = Config.api + 'repair/repair_image'; //执行文件上传
-Config.submitRepair = Config.api + 'repair/submit_repair'; //执行文件上传操作
+Config.uploadFile = Config.gateway + 'ossService/file/uploadRepairImag'; //执行文件上传
+Config.submitRepair = Config.gateway + 'ossService/file/uploadRepairImag'; //执行文件上传操作
 Config.finishRepair = Config.api + 'repair/finish_order'; //确认报修已完成
 Config.getMyInfo = Config.api + 'user/get_my_info'; //获取用户信息
 Config.getBanner = Config.api + 'index/get_banner'; //获取轮播图

@@ -15,6 +15,7 @@
     "pages/add-address/add-address",
     "pages/repDetails/repDetails",
     "pages/repairs/repairs",
+    "pages/report/report",
     "pages/vote/vote",
     "pages/voteSubject/voteSubject",
     "pages/voteDetails/voteDetails",
